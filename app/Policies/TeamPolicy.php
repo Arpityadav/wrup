@@ -73,4 +73,9 @@ class TeamPolicy
     {
         return $user->ownsTeam($team);
     }
+
+    public function show(User $user, Team $team): bool
+    {
+        return $user->belongsToTeam($team);
+    }
 }
